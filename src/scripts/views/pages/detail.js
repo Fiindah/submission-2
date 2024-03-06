@@ -23,7 +23,7 @@ const Detail = {
 */
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto,
+      restoran,
     });
   },
 };
