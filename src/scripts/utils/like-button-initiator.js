@@ -43,6 +43,7 @@ const LikeButtonInitiator = {
       this._renderButton();
     });
   },
+
 };
 
 export default LikeButtonInitiator;
