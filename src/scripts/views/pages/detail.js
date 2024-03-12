@@ -13,17 +13,16 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const resto = await TheRestoDbSource.detailResto(url.id);
-    console.log(resto);
+    const restoran = await TheRestoDbSource.detailResto(url.id);
     const restoContainer = document.querySelector('#detail');
-    restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
+    restoContainer.innerHTML = createRestoDetailTemplate(restoran.restaurant);
 
-/*  const likeButtonContainer = document.querySelector('#likeButtonContainer');
+    /**  const likeButtonContainer = document.querySelector('#likeButtonContainer');
     likeButtonContainer.innerHTML = createLikeButtonTemplate();
-*/
+* */
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      restoran,
+      restaurant: restoran,
     });
   },
 };
